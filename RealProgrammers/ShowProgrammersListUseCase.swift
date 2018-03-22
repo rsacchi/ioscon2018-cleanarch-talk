@@ -11,11 +11,10 @@ import Foundation
 class ShowProgrammersListUseCase {
     
     let entityGateway: EntityGateway
-    var presenter: ProgrammersListPresentation // weakify later
+    var presenter: ProgrammersListPresentation! // weakify later
     
-    init(entityGateway: EntityGateway, presenter: ProgrammersListPresentation) {
+    init(entityGateway: EntityGateway) {
         self.entityGateway = entityGateway
-        self.presenter = presenter
     }
     
     func showProgrammers() {
